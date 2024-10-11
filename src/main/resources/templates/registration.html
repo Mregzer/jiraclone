@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration new account</title>
+</head>
+<body>
+    <form th:action="@{/registration}" method="post" th:object="${user}">
+        <div><label> Username: <input th:field="*{username}" type="text" name="username" id="username"> </label></div>
+        <div><label> Email: <input th:field="*{email}" type="text" name="email" id="email"> </label></div>
+        <div><label> Password: <input th:field="*{password}" type="text" name="password" id="password"> </label></div>
+        <input type="submit" value="Зарегестрироваться">
+    </form>
+</body>
+</html>
