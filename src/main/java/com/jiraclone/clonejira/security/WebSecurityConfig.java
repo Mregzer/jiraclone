@@ -34,4 +34,9 @@ public class WebSecurityConfig {
                 .logout(logout -> logout.permitAll());
         return http.build();
     }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 }
